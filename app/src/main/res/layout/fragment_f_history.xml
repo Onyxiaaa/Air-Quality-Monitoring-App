@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/blue"
+    android:orientation="vertical"
+    tools:context=".FHistory">
+    <TextView
+        android:id="@+id/garut_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Garut, West Java"
+        android:fontFamily="@font/mont"
+        android:textColor="@color/white"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_today"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/garut_history"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="30dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Today PM10 Air Quality"
+                android:textSize="20sp"
+                android:fontFamily="@font/mont"
+                android:textColor="@color/blue"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+                <LinearLayout
+                    android:layout_marginLeft="13dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardtodaymid"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        app:cardBackgroundColor="@color/blue"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="15dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:id="@+id/nilaipm10todaymin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="27"
+                                android:fontFamily="@font/mont"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/white" />
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MIN"
+                                android:fontFamily="@font/mont"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardtodaymax"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        app:cardBackgroundColor="@color/blue"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="15dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:id="@+id/nilaipm10todaymax"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="81"
+                                android:fontFamily="@font/mont"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/white" />
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MAX"
+                                android:fontFamily="@font/mont"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardtodayaverage"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        app:cardBackgroundColor="@color/blue"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="15dp"
+>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:id="@+id/nilaipm10todayaverage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="182"
+                                android:fontFamily="@font/mont"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/white" />
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="AVERAGE"
+                                android:fontFamily="@font/mont"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_2weeks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card_10days"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mont"
+                android:text="PM10 Air Quality Last 2 Weeks"
+                android:textColor="@color/blue"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardweekmin"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        app:cardBackgroundColor="@color/blue"
+                        app:cardCornerRadius="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/nilaipm10weekmin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/mont"
+                                android:text="27"
+                                android:textColor="@color/white" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/mont"
+                                android:text="MIN"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardweekmax"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        app:cardBackgroundColor="@color/blue"
+                        app:cardCornerRadius="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/nilaipm10weekmax"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/mont"
+                                android:text="81"
+                                android:textColor="@color/white" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/mont"
+                                android:text="MAX"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardweekaverage"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        app:cardBackgroundColor="@color/blue"
+                        app:cardCornerRadius="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/nilaipm10weekaverage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/mont"
+                                android:text="182"
+                                android:textColor="@color/white" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/mont"
+                                android:text="AVERAGE"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_10days"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card_today"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="30dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:text="PM10 Air Quality Last 10 Days"
+                android:textSize="20sp"
+                android:fontFamily="@font/mont"
+                android:textColor="@color/blue"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+                <LinearLayout
+                    android:layout_marginLeft="13dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card10min"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        app:cardBackgroundColor="@color/blue"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="15dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:id="@+id/nilaipm1010min"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="27"
+                                android:fontFamily="@font/mont"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/white" />
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MIN"
+                                android:fontFamily="@font/mont"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card10max"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        app:cardBackgroundColor="@color/blue"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="15dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:id="@+id/nilaipm1010max"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="81"
+                                android:fontFamily="@font/mont"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/white" />
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MAX"
+                                android:fontFamily="@font/mont"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card10average"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        app:cardBackgroundColor="@color/blue"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="15dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:id="@+id/nilaipm1010average"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="182"
+                                android:fontFamily="@font/mont"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/white" />
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="AVERAGE"
+                                android:fontFamily="@font/mont"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

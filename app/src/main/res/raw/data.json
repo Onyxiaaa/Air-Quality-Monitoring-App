@@ -1,0 +1,26 @@
+{
+  "o2": {
+    "percentage": 60
+  },
+  "co2": {
+    "percentage": 400
+  },
+  "co": {
+    "percentage": 5
+  },
+  "methane": {
+    "percentage": 23
+  },
+  "butane": {
+    "percentage": 11
+  },
+  "propane": {
+    "percentage": 34
+  },
+  "temp": {
+    "value": 25
+  },
+  "hum": {
+    "percentage": 50
+  }
+}

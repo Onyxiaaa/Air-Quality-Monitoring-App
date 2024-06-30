@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">iot_project</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_maps_api_key">AIzaSyDL9XygFiGQvFdQDtyaUU3VlRTY3zisXrI</string>
+    <string name="deskripsi">Sistem Pemantauan Kualitas Udara Multisensor dirancang untuk memberikan informasi yang akurat dan real-time mengenai kualitas udara di sekitar lingkungan tertentu. Dengan menggunakan sejumlah sensor berkualitas tinggi, produk ini mampu mengukur berbagai parameter kunci termasuk kadar Metana (CH4), karbon dioksida (CO2), PM1, PM25, PM10, suhu, dan kelembaban.</string>
+    <string name="fitur">Sensor Multiguna Pemantauan Suhu dan Kelembaban Teknologi Real-time Konektivitas dan Integrasi  Antarmuka Pengguna yang Ramah Desain Modular dan Skalabilitas</string>
+
+</resources>
